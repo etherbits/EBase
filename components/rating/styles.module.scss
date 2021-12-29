@@ -1,0 +1,23 @@
+@import 'styles/_theme.scss';
+
+.circle-wrapper {
+	position: relative;
+	width: 46%;
+	aspect-ratio: 1/1;
+	svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		// width: 46%;
+	}
+}
+
+.filled {
+	fill: $accent;
+	filter: drop-shadow(0px 0px 4px transparentize($accent, 0.75));
+}
+
+.empty {
+	fill: $bg-1;
+	filter: drop-shadow(1px 1px 2px #0004);
+}

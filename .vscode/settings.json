@@ -1,0 +1,9 @@
+{
+	"prettier.singleQuote": true,
+	"prettier.semi": false,
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"prettier.printWidth": 140,
+	"prettier.jsxSingleQuote": true,
+	"javascript.format.semicolons": "remove"
+}

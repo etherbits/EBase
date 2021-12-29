@@ -1,0 +1,84 @@
+@import '_theme.scss';
+
+.container {
+	width: 25rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.logo {
+	font-size: 7rem;
+	font-family: 'Kano';
+	color: $font-0;
+	margin: 8vh auto;
+	& > span {
+		color: $accent;
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	background-color: $bg-2;
+	padding: 2rem;
+	box-shadow: 4px 4px 16px #0004;
+	color: $font-0;
+	font-size: 1.3rem;
+	gap: 34px;
+	border-radius: 12px;
+	letter-spacing: 2px;
+
+	.title {
+		font-size: 2rem;
+		text-align: center;
+		letter-spacing: 4px;
+		// font-weight: 300;
+	}
+
+	input {
+		font-size: 1.3rem;
+		background-color: $bg-4;
+		border: none;
+		padding: 0.75rem;
+		margin-top: 8px;
+		width: 100%;
+		color: $font-0;
+		font-family: 'Montserrat';
+		font-weight: 400;
+
+		&::placeholder {
+			color: $font-0;
+			opacity: 0.6;
+		}
+		border-radius: 6px;
+	}
+
+	.button-container {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	button,
+	.redirect {
+		font-size: 1.3rem;
+		border: 0;
+		padding: 0.75rem;
+		border-radius: 6px;
+		cursor: pointer;
+	}
+
+	button[type='submit'] {
+		background-color: $accent;
+		color: $font-0;
+	}
+
+	.redirect {
+		text-align: center;
+		background-color: transparent;
+		border: 2px solid $accent;
+		color: $accent;
+	}
+}

@@ -1,0 +1,57 @@
+@import './theme';
+
+.page {
+	display: flex;
+}
+
+.main {
+	padding: 2rem;
+	width: 100%;
+}
+
+.head {
+	display: flex;
+	margin-bottom: 2rem;
+	justify-content: space-between;
+}
+
+.types {
+	display: flex;
+	box-shadow: 4px 4px 8px #0004;
+	width: fit-content;
+	color: $font-0;
+	overflow: hidden;
+	border-radius: 4px;
+	a {
+		display: flex;
+		background-color: darken($bg-0, 4);
+		padding: 1rem;
+		height: 100%;
+		align-items: center;
+	}
+	a[active-type='true'] {
+		background-color: $bg-0;
+	}
+}
+
+.states {
+	display: flex;
+	box-shadow: 4px 4px 8px #0004;
+	width: fit-content;
+	overflow: hidden;
+	border-radius: 4px;
+	a {
+		display: flex;
+		background-color: darken($bg-0, 4);
+		padding: 1rem;
+		height: 100%;
+		border: 0;
+		color: $font-0;
+		font-size: 1rem;
+		font-family: 'Montserrat';
+		align-items: center;
+	}
+	a[active-state='true'] {
+		background-color: $bg-0;
+	}
+}
