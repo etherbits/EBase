@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EBase - Full-stack web application
 
-## Getting Started
+Ebase is a Full-stack Next.js web application with the primary purpose of managing and organizing content such as movies and TV shows. Which utilizes React and SCSS for the front-end and the server-side and static rendering capabilities of NextJS.  
+  
+I used this stack mainly to get more experience using production-level frameworks such as Next.js pretty much has everything a solo dev like me could ever hope for a production framework to have. While this stack is not all that widespread compared to others, it has amazing scalability and some of the best bleeding-edge features while maintaining simplicity and ease of use.  
 
-First, run the development server:
+Notable technologies used:  
+- React  
+- Iron-Session  
+- PostgreSQL  
+- Prisma  
+- Next.js  
+- SCSS  
+- Typescript  
+- Webpack  
+- Argon2  
+  
+## Website functionality  
+Users can register an account and log in using a username and a password. The password is securely hashed using the Argon2Id cryptographic hashing algorithm used for password hashing and stored in a PostgreSQL database using Prisma, an Object-Relational Mapping (ORM) library for Next.js. The account is used for storing and managing digital content. Each route verifies that the current user is authenticated using sessions stored in an encrypted cookie; if a user is not authenticated, they will be prompted to log in.  
+  
+The content, which consists of movies and TV shows, is fetched from Themoviedb API. Using this API, a user can browse what's trending at the given moment, search for movies and TV shows, and get the details on a specific piece of content.  
+  
+Since a lot of content is displayed at a given time, images are lazy-loaded for much faster page load speeds; also the content is fetched chunk by chunk depending on the actions of the user, so no data will be wasted if there is no use for more content.  
+  
+If a user finds something worth keeping a track of he/she can easily do that with a click of a button. The piece of content will be saved to the user's private list, from where the user can manage the state of the piece of content.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Video demo: <https://www.youtube.com/watch?v=yp5Uso8klBg>
+The video demo shows off the functionality of the website.
